@@ -1,0 +1,136 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+security passwords min-length 10
+!
+hostname r-ita-CGAM
+!
+login block-for 120 attempts 3 within 60
+!
+!
+enable secret 5 $1$mERr$cAA3toM5uK5TDV8U1Ykae.
+!
+!
+!
+!
+!
+!
+no ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+username caio secret 5 $1$mERr$F5V/u2120qbEqnDJcxLe00
+!
+!
+license udi pid CISCO2811/K9 sn FTX101729IR-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name caio.aderne.com.br
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet0/1
+ ip address 200.200.20.241 255.255.255.252
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:ACAD:14FF::4:1/112
+!
+interface Serial0/0/0
+ ip address 200.200.20.237 255.255.255.252
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:ACAD:14FF::3:1/112
+ clock rate 56000
+!
+interface Serial0/0/1
+ ip address 200.200.20.234 255.255.255.252
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:ACAD:14FF::2:2/112
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 200.200.20.0 255.255.255.192 200.200.20.238 
+ip route 200.200.20.64 255.255.255.224 200.200.20.238 
+ip route 200.200.20.96 255.255.255.224 200.200.20.242 
+ip route 200.200.20.224 255.255.255.252 200.200.20.238 
+ip route 200.200.20.228 255.255.255.252 200.200.20.238 
+!
+ip flow-export version 9
+!
+ipv6 route 2001:DB8:ACAD:1400::/64 2001:DB8:ACAD:14FF::3:2
+ipv6 route 2001:DB8:ACAD:1401::/64 2001:DB8:ACAD:14FF::3:2
+ipv6 route 2001:DB8:ACAD:1402::/64 2001:DB8:ACAD:14FF::4:2
+ipv6 route 2001:DB8:ACAD:14FF::/112 2001:DB8:ACAD:14FF::3:2
+ipv6 route 2001:DB8:ACAD:14FF:1::/112 2001:DB8:ACAD:14FF::3:2
+!
+ip access-list extended sl_def_acl
+ deny tcp any any eq telnet
+ deny tcp any any eq www
+ deny tcp any any eq 22
+ permit tcp any any eq 22
+!
+no cdp run
+!
+banner motd %
+--------------------------------------------------------------------------
+|                                                                        |
+|                          Roteador Pato Branco                          |
+|                                                                        |
+|               ATENO Acesso Restrito a pessoas autorizadas!             |
+|                                                                        |
+|Administrador:Caio Gabriel Aderne de Melo(caio.1996@alunos.utfpr.edu.br)|
+|                                                                        |
+--------------------------------------------------------------------------
+ %
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 0
+ password @Cons-caio
+ login
+!
+line aux 0
+!
+line vty 0 4
+ exec-timeout 5 0
+ login
+ transport input ssh
+line vty 5 15
+ exec-timeout 5 0
+ login
+ transport input ssh
+!
+!
+!
+end
+
