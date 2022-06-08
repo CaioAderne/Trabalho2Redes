@@ -161,13 +161,13 @@
 
 
 ## Arquivos de Configuração dos Dispositivos Intermediários (roteadores e switches)
-- [ ] ![Roteador Pato Branco](r-pb-nnn.pkt)
-- [ ] ![Roteador Francisco Beltrão](r-fb-nnn.pkt)
-- [ ] ![Roteador Vitorino](r-vit-nnn.pkt)
-- [ ] ![Roteador Itapejara D'Oeste](r-ita-nnn.pkt)
-- [ ] ![Roteador Coronel Vivida](r-cv-nnn.pkt)
-- [ ] ![Switch Pato Branco](sw-pb-nnn.pkt)
-- [ ] ![Switch Francisco Beltrão](sw-fb-nnn.pkt)
-- [ ] ![Switch Coronel Vivida](sw-cv-nnn.pkt)
+- [ ] ![Roteador Pato Branco](r-pb-CGAM.txt)
+- [ ] ![Roteador Francisco Beltrão](r-fb-CGAM.txt)
+- [ ] ![Roteador Vitorino](r-vt-CGAM.txt)
+- [ ] ![Roteador Itapejara D'Oeste](r-ita-CGAM.txt)
+- [ ] ![Roteador Coronel Vivida](r-cv-CGAM.txt)
+- [ ] ![Switch Pato Branco](sw-matriz-CGAM.txt)
+- [ ] ![Switch Francisco Beltrão](sw-filial1-CGAM.txt)
+- [ ] ![Switch Coronel Vivida](sw-filial2-CGAM.txt)
 
 
