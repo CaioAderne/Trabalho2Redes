@@ -62,10 +62,10 @@
 #### IPv6
 | Rede de Destino/Prefixo | Next Hop | Interface de Saída |
 |-----------------|----------|--------------------|
-|2001:db8:acad:14ff:1::0/112	|2001:db8:acad:14ff::2	|Se0/0/0|
+|2001:db8:acad:14ff::1:0/112	|2001:db8:acad:14ff::2	|Se0/0/0|
 |2001:db8:acad:1401::0/64	|2001:db8:acad:14ff::2|	Se0/0/0|
-|2001:db8:acad:14ff:2::0/112	|2001:db8:acad:14ff::2	|Se0/0/0|
-|2001:db8:acad:14ff:4::0/112	|2001:db8:acad:14ff::2|	Se0/0/0|
+|2001:db8:acad:14ff::2:0/112	|2001:db8:acad:14ff::2	|Se0/0/0|
+|2001:db8:acad:14ff::4:0/112	|2001:db8:acad:14ff::2|	Se0/0/0|
 |2001:db8:acad:1402::0/64|	2001:db8:acad:14ff::2	|Se0/0/0|
 
 ### Roteador Francisco Beltrão
@@ -82,9 +82,9 @@
 #### IPv6
 | Rede de Destino/Prefixo | Next Hop | Interface de Saída |
 |-----------------|----------|--------------------|
-|2001:db8:acad:14ff:4::0/112	|2001:db8:acad:14ff::2:2	|Se0/0/0|
+|2001:db8:acad:14ff::4:0/112	|2001:db8:acad:14ff::2:2	|Se0/0/0|
 |2001:db8:acad:1402::0/64	|2001:db8:acad:14ff::2:2|Se0/0/0|
-|2001:db8:acad:14ff:3::0/112	|2001:db8:acad:14ff::2:2	|Se0/0/0|
+|2001:db8:acad:14ff::3:0/112	|2001:db8:acad:14ff::2:2	|Se0/0/0|
 |2001:db8:acad:1400::0/64	|2001:db8:acad:14ff::2:2	|Se0/0/0|
 |2001:db8:acad:14ff::0/112|	2001:db8:acad:14ff::2:2	|Se0/0/0|
 
@@ -106,9 +106,9 @@
 |2001:db8:acad:1400::0/64	|2001:db8:acad:14ff::1:2	|Se0/0/0|
 |2001:db8:acad:1401::0/64	|2001:db8:acad:14ff::1:2	|Se0/0/0|
 |2001:db8:acad:1402::0/64	|2001:db8:acad:14ff::1:2	|Se0/0/0|
-|2001:db8:acad:14ff:2::0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
-|2001:db8:acad:14ff:3::0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
-|2001:db8:acad:14ff:4::0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
+|2001:db8:acad:14ff::2:0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
+|2001:db8:acad:14ff::3:0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
+|2001:db8:acad:14ff::4:0/112	|2001:db8:acad:14ff::1:2	|Se0/0/0|
 
 ### Roteador Itapejara D’Oeste
 #### IPv4
@@ -128,7 +128,7 @@
 |2001:db8:acad:1401::0/64	|2001:db8:acad:14ff::3:2	|Se0/0/0|
 |2001:db8:acad:1402::0/64	|2001:db8:acad:14ff::4:2	|Fa0/1|
 |2001:db8:acad:14ff::0/112	|2001:db8:acad:14ff::3:2	|Se0/0/0|
-|2001:db8:acad:14ff:1::0/112|	2001:db8:acad:14ff::3:2	|Se0/0/0|
+|2001:db8:acad:14ff::1:0/112|	2001:db8:acad:14ff::3:2	|Se0/0/0|
 
 ### Roteador Coronel Vivida
 #### IPv4
@@ -148,9 +148,9 @@
 |2001:db8:acad:1400::0/64	|2001:db8:acad:14ff::4:1|	Fa0/1|
 |2001:db8:acad:1401::0/64	|2001:db8:acad:14ff::4:1|	Fa0/1|
 |2001:db8:acad:14ff::0/112	|2001:db8:acad:14ff::4:1|	Fa0/1|
-|2001:db8:acad:14ff:1::0/112|	2001:db8:acad:14ff::4:1|	Fa0/1|
-|2001:db8:acad:14ff:2::0/112	|2001:db8:acad:14ff::4:1|	Fa0/1|
-|2001:db8:acad:14ff:3::0/112|	2001:db8:acad:14ff::4:1	|Fa0/1|
+|2001:db8:acad:14ff::1:0/112|	2001:db8:acad:14ff::4:1|	Fa0/1|
+|2001:db8:acad:14ff::2:0/112	|2001:db8:acad:14ff::4:1|	Fa0/1|
+|2001:db8:acad:14ff::3:0/112|	2001:db8:acad:14ff::4:1	|Fa0/1|
 
 
 
@@ -164,7 +164,7 @@
 - [ ] ![Roteador Pato Branco](r-pb-CGAM.txt)
 - [ ] ![Roteador Francisco Beltrão](r-fb-CGAM.txt)
 - [ ] ![Roteador Vitorino](r-vt-CGAM.txt)
-- [ ] ![Roteador Itapejara D'Oeste](r-ita-CGAM.txt)
+- [ ] ![Roteador Itapejara D'Oeste](r-pita-CGAM.txt)
 - [ ] ![Roteador Coronel Vivida](r-cv-CGAM.txt)
 - [ ] ![Switch Pato Branco](sw-matriz-CGAM.txt)
 - [ ] ![Switch Francisco Beltrão](sw-filial1-CGAM.txt)
