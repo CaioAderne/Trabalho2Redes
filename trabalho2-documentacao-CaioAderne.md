@@ -157,7 +157,7 @@
 
 
 ## Topologia - Packet Tracer
-- [ ] ![Trabalho2-Topologia-CaioAderne](Trabalho2-Topologia-CaioAderne.pkt)
+- [ ] ![Trabalho2-Topologia-CaioAderne](Trabalho2-Topologia-CaioGAderne.pkt)
 
 
 ## Arquivos de Configuração dos Dispositivos Intermediários (roteadores e switches)
