@@ -62,13 +62,11 @@ interface FastEthernet0/1
 !
 interface Serial0/0/0
  ip address 200.200.20.233 255.255.255.252
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::2:1/112
  clock rate 56000
 !
 interface Serial0/0/1
  ip address 200.200.20.230 255.255.255.252
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::1:2/112
 !
 interface Vlan1
@@ -84,9 +82,9 @@ ip route 200.200.20.224 255.255.255.252 200.200.20.234
 !
 ip flow-export version 9
 !
-ipv6 route 2001:DB8:ACAD:14FF:4::/112 2001:DB8:ACAD:14FF::2:2
+ipv6 route 2001:DB8:ACAD:14FF::4:0/112 2001:DB8:ACAD:14FF::2:2
 ipv6 route 2001:DB8:ACAD:1402::/64 2001:DB8:ACAD:14FF::2:2
-ipv6 route 2001:DB8:ACAD:14FF:3::/112 2001:DB8:ACAD:14FF::2:2
+ipv6 route 2001:DB8:ACAD:14FF::3:0/112 2001:DB8:ACAD:14FF::2:2
 ipv6 route 2001:DB8:ACAD:1400::/64 2001:DB8:ACAD:14FF::2:2
 ipv6 route 2001:DB8:ACAD:14FF::/112 2001:DB8:ACAD:14FF::2:2
 !

@@ -1,3 +1,4 @@
+!
 version 15.1
 no service timestamps log datetime msec
 no service timestamps debug datetime msec
@@ -60,13 +61,11 @@ interface FastEthernet0/1
 !
 interface Serial0/0/0
  ip address 200.200.20.225 255.255.255.252
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::1/112
  clock rate 56000
 !
 interface Serial0/0/1
  ip address 200.200.20.238 255.255.255.252
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::3:2/112
 !
 interface Vlan1
@@ -83,10 +82,10 @@ ip route 200.200.20.240 255.255.255.252 200.200.20.226
 !
 ip flow-export version 9
 !
-ipv6 route 2001:DB8:ACAD:14FF:1::/112 2001:DB8:ACAD:14FF::2
+ipv6 route 2001:DB8:ACAD:14FF::1:0/112 2001:DB8:ACAD:14FF::2
 ipv6 route 2001:DB8:ACAD:1401::/112 2001:DB8:ACAD:14FF::2
-ipv6 route 2001:DB8:ACAD:14FF:2::/112 2001:DB8:ACAD:14FF::2
-ipv6 route 2001:DB8:ACAD:14FF:4::/112 2001:DB8:ACAD:14FF::2
+ipv6 route 2001:DB8:ACAD:14FF::2:0/112 2001:DB8:ACAD:14FF::2
+ipv6 route 2001:DB8:ACAD:14FF::4:0/112 2001:DB8:ACAD:14FF::2
 ipv6 route 2001:DB8:ACAD:1402::/112 2001:DB8:ACAD:14FF::2
 !
 ip access-list extended sl_def_acl
@@ -95,7 +94,7 @@ ip access-list extended sl_def_acl
  deny tcp any any eq 22
  permit tcp any any eq 22
 !
-banner motd ^C
+banner motd %
 --------------------------------------------------------------------------
 |                                                                        |
 |                          Roteador Pato Branco                          |
@@ -105,7 +104,7 @@ banner motd ^C
 |Administrador:Caio Gabriel Aderne de Melo(caio.1996@alunos.utfpr.edu.br)|
 |                                                                        |
 --------------------------------------------------------------------------
- ^C
+ %
 !
 !
 !
@@ -130,3 +129,4 @@ line vty 5 15
 !
 !
 end
+
