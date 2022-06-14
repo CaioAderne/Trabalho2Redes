@@ -57,7 +57,6 @@ interface FastEthernet0/1
  ip address 200.200.20.241 255.255.255.252
  duplex auto
  speed auto
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::4:1/112
 !
 interface Serial0/0/0
@@ -72,6 +71,8 @@ interface Serial0/0/1
 interface Vlan1
  no ip address
  shutdown
+!
+router rip
 !
 ip classless
 ip route 200.200.20.0 255.255.255.192 200.200.20.238 

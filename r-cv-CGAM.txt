@@ -58,7 +58,6 @@ interface FastEthernet0/1
  ip address 200.200.20.242 255.255.255.252
  duplex auto
  speed auto
- ipv6 address FE80::1 link-local
  ipv6 address 2001:DB8:ACAD:14FF::4:2/112
 !
 interface Vlan1
